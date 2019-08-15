@@ -1,6 +1,5 @@
 import {Scene} from 'phaser'
 
-
 class Index extends Scene {
 
     create() {
