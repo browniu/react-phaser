@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Phaser, {Game} from 'phaser'
 import './core.scss'
 import Index from './scene/index'
+import Click from './scene/click'
 
 class Core extends Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class Core extends Component {
             height: 1080,
             transparent: true,
             parent: 'canvas',
-            scene: [Index]
+            scene: [Index, Click]
         }
     }
 
