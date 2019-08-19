@@ -2,8 +2,13 @@ import {Scene} from 'phaser'
 
 class Index extends Scene {
 
-
     create() {
+
+        this.graphics = this.add.graphics();
+        this.graphics.fillStyle(0xff0000, 1);
+        this.graphics.fillRect(this.game.config.width / 2, this.game.config.height / 2, 64, 64);
+
+
         const image = this.add.sprite(this.game.config.width / 2, this.game.config.height / 2, 'icon').setInteractive();
         image.setScale(0.2);
         image.setAlpha(0.3);
@@ -13,7 +18,6 @@ class Index extends Scene {
 
         this.input.on('dragstart', (pointer, gameObject) => {
             this.pos = [gameObject.x, gameObject.y];
-            this.startPos = [pointer.downX, pointer.downY];
             this.tweens.add({
                 targets: image,
                 alpha: {value: 1, duration: 300, ease: 'Power1'},
@@ -60,7 +64,6 @@ class Index extends Scene {
     }
 
     update = () => {
-
 
         // if (this.input.pointer1.isDown) {
         //     this.graphics.clear();

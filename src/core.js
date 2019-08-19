@@ -25,6 +25,10 @@ class Core extends Component {
         return (
             <div className={'core'}>
                 <div className={'view'} id="canvas"/>
+                <button onClick={() => {
+                    Phaser.Scene.call(this, {key: 'Click'});
+                }}>exchange
+                </button>
             </div>
         );
     }
