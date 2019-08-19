@@ -53,8 +53,8 @@ class Index extends Scene {
                 targets: image,
                 alpha: {value: 0.3, duration: 300, ease: 'Power1'},
                 scale: {value: 0.2, duration: 300, ease: 'Power1'},
-                x: {value: this.pos[0], duration: 300, ease: 'Bounce.easeOut'},
-                y: {value: this.pos[1], duration: 300, ease: 'Bounce.easeOut'},
+                x: {value: this.pos[0], duration: 300, ease: 'Power1'},
+                y: {value: this.pos[1], duration: 300, ease: 'Power1'},
             });
         });
     }
